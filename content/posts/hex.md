@@ -1,7 +1,9 @@
 ---
 title: "Understanding Hexadecimal"
+summary: "hexadecimal: what it is, what it's used for, and examples in the wild"
 date: 2020-02-06
-draft: true
+draft: false
+tags: [programming]
 ---
 
 If you come into programming without a computer science background, you probably have looked at weird stuff like this `\u2318` or `&#x0041;` either in your code, maybe in some regular expressions, or possibly in your markup for your web pages. If you have ever tried to read a stack trace or a crash dump of one of your programs, you may see some other examples like `0x39` or `0xF5`. If you are a web developer, you are already most familiar with something called "hex" color codes, used for coloring your text, background, and borders, such as `#FFFFFF` for white, or `#000000` for black.

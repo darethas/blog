@@ -4,6 +4,8 @@ title = "Illusion of Control"
 theme = "hugo-ink"
 paginate = 5
 
+googleAnalytics = "UA-157969224-1"
+
 [params]
 subtitle = "The strong, loosely held opinions of a software developer on a variety of topics."
 
