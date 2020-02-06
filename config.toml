@@ -1,0 +1,43 @@
+baseURL = "http://dimitriosarethas.dev/"
+languageCode = "en-us"
+title = "Illusion of Control"
+theme = "hugo-ink"
+paginate = 5
+
+[params]
+subtitle = "The strong, loosely held opinions of a software developer on a variety of topics."
+
+
+# Nav.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/darethas"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/darethas"
+
+[taxonomies]
+   tag = "tags"
