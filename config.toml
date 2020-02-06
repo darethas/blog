@@ -1,4 +1,4 @@
-baseURL = "http://dimitriosarethas.dev/"
+baseURL = "https://dimitriosarethas.dev/"
 languageCode = "en-us"
 title = "Illusion of Control"
 theme = "hugo-ink"
