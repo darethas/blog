@@ -1,6 +1,6 @@
 ---
 title: "Understanding Hexadecimal"
-date: 2020-02-02T14:10:56-05:00
+date: 2020-02-06
 draft: true
 ---
 
