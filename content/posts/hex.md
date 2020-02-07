@@ -21,9 +21,13 @@ To better understand hexidecimal, it helps to understand numbers and numerical r
 The Greeks quickly followed, mapping their numbers to Doric and Ionian.
 The Sumerians and Babylonians represented numbers using wedge-shaped marks on clay tablets also known as Cuneiform. The Romans, arguably the most famous, used Roman Numerals.
 
-Today, outside of Super Bowls, time units, angles, and watch faces [^1], the the vast majority of people know numbers as being 0-9. This is known as the Indo-Arabic numeral system. (Fun fact: Zero wasn't discovered until 628 AD by an Indian mathematician and astronomer named Brahmagupta) and are taught from a young age how to count using the positional notation of base 10, also known as the decimal system. The positional system is another key component in any numeral system, and is what allows you to easily express larger values. The Babylonians were credited with creating the first positional system. The overwhelming majority of the world uses the decimal system.
+Today, outside of Super Bowls, time units, angles, and watch faces [^1], the the vast majority of people know numbers as being 0-9. This is known as the Indo-Arabic numeral system (Fun fact: Zero wasn't discovered until 628 AD by an Indian mathematician and astronomer named Brahmagupta).
 
-Thus, when we think of "numbers" in the modern sense, we are really talking about two things: a numeral system (Indo-Arabic) and a positional system (base 10). If we attempt to visualize base 10, it might look something like this:
+Besides numerals, another important component in a numeral system is the _positional notation_. Most of us are taught from a young age how to count using the positional notation of base 10, also known as decimal. You may recall being taught in school the different "places" that a number, such as the "ones", "tens", "hundreds", and so on. Positional systems are what allow you to easily express larger values beyond the basic numerals of 0-9. The Babylonians were credited with creating the first positional system referred to in modern times as _Sexagesimal_. The overwhelming majority of the world uses decimal today.
+
+Thus, when we think of "numbers" in the modern sense, we are really talking about two things: a numeral system, such as Indo-Arabic, and a positional system, such as base 10.
+
+If we attempt to visualize base 10, it might look something like this:
 
 ```
 // the base 10 positional system:
@@ -31,7 +35,7 @@ ______ ______ ______ ______ ______
  10^4   10^3   10^2   10^1   10^0
 ```
 
-If you evaluate those exponents, you may start to see some more recongizable language in regards to those positions. I am sure we have all heard our math teachers say _"ones, tens, hundreds, thousands"_. Any number raised to the zero power is 1 or ones. Then you have 10^1 which is 10 or tens, 10^2 which is 100 or hundreds, 10^3 which is 1000, 10^4 which is 1000 or thousands. In the immortal words of Gus Portokalos, ["There you go."](https://www.youtube.com/watch?v=VL9whwwTK6I)
+If you evaluate those exponents, you may start to see that famous language in regards to those positions: _"ones, tens, hundreds, thousands"_. Any number raised to the zero power is 1 or ones. Then you have 10^1 which is 10 or tens, 10^2 which is 100 or hundreds, 10^3 which is 1000, 10^4 which is 1000 or thousands. In the immortal words of Gus Portokalos, ["There you go."](https://www.youtube.com/watch?v=VL9whwwTK6I)
 
 What is interesting about this is that it is generalizable. Starting from the furthest digit to the right, you have position 0. Each time you add a significant digit to the left, you have a new position, so you add one.
 
@@ -41,7 +45,7 @@ ______ ______ ______ ______ ______
 base^n base^3 base^2 base^1 base^0
 ```
 
-As you may have caught whiff of by now, you don't have to use 10 as the base. You can use other numbers, like 2, 4, 6, 8, 12, 16, or even 60. For reasons beyond the scope of this post, there are qualities, both mathematical and pratical, that make certain bases work better than others. For example, the pervailing theory around base 10's popularity is because people like to count with their fingers.
+As you may have caught whiff of by now, you don't have to use 10 as the base. You can use other numbers, like 2, 4, 6, 8, 12, 16, or even 60. For reasons beyond the scope of this post, there are qualities, both mathematical and pratical, that make certain bases work better than others. The pervailing theory around base 10's popularity is because people liked counting with their fingers.
 
 ## The answer to our first riddle
 
@@ -66,7 +70,7 @@ The maximum value you can represent using a single hexadecimal digit, sometimes 
 16^0        ->      16^1   16^0
 ```
 
-Another way to arrive at a value a hexadecimal digit is representing is by taking the nibble and it's position, multiplying them together, and adding it to the next position. In this case, we would take `(0*16^0)` and add it to `(1 * 16^1)`, which is 16. With this knowledge we now have the ability to represent any decimal value we wish in hex.
+Another way to arrive at a value a hexadecimal digit represents is to take the nibble and it's position value, multiply them together, and add it to the next. In the above example, we would take `(0*16^0)` and add it to `(1 * 16^1)`, which is 16. With this knowledge, we now have the ability to represent any decimal value we wish in hex.
 
 ```
 // some examples:
@@ -96,15 +100,15 @@ ______ ______ ______ ______ ______
   2^4    2^3    2^2    2^1    2^0
 ```
 
-The reason binary is found in so many electronics is because 0 and 1 is really easy to implement in digital circuts using logic gates. The "high" waveform of a signal can be used to represent "on" or 1, and a "low" waveform can be used to represent "off" or 0.
+The reason binary is found in so many electronics is because 0 and 1 is really easy to implement in digital circuts using logic gates. The "high" waveform of a signal can be used to represent "on" or 1, and a "low" waveform can be used to represent "off" or 0. As computers and electronics became more widespread, more people started to use binary.
 
-As computers and electronics became more widespread, more and more people started to use binary. A single binary digit is referred to as a _bit_. Eight bits equal a _byte_. As we moved from 8-bit machines, to 16, 32, now 64 and possibly soon 128, the size of binary code got unmanagble for humans. Hex became a human-readable format for reading binary because of it's ability to represent _four_ bits in just one _nibble_ [^3].
+A single binary digit is referred to as a _bit_. Eight bits equals a _byte_. Early computers could only consume 8 bits or a single byte at a time (The number of bits a CPU can consume all at once is typically called the _word size_). As we moved from 8-bit machines, to 8 byte machines, then 16, 32, to now 64, the size of binary code quickly became unmanagble for humans.
 
-It isn't know who exactly was the first person to discover that it was easier to represent long strings of binary in hex. In any case, I am sure the discovery went something like "Oh cool, you can use 2 hex digits to represent an entire byte!"
+This is where hex comes in. Hex became a human-readable format for reading binary because of it's ability to represent _four_ bits in just one _nibble_ [^3]. It isn't known who exactly was the first person to discover this, but I am pretty sure the discovery went something like "Oh cool, you can use a single hex digit to represent 4 bits!"
 
-Hex is especially useful for deciphering _binary-to-text encodings_, such as ASCII or Unicode. When we type the uppercase letter 'A', on our screens we see the letter, but to the computer using an ASCII or UTF8 encoding, that really is a `01000001`. Now suppose we had to recognize this in a stream of input or output trying to debug a program! Luckily, those smart computer science pioneer folk thought of us, and gave us hex to use, because we can represent that entire sequence with the hex number of `41`
+Hex is now ubiquitous whenever binary is involved. It is especially useful for deciphering _binary-to-text encodings_, such as ASCII or Unicode. When we type the uppercase letter 'A', on our screens we see the letter, but to the computer using an ASCII or UTF8 encoding, that really is a `01000001`. Now suppose we had to recognize this in a stream of input or output trying to debug a program! Luckily, those smart computer science pioneer folk thought of us, because we can represent that entire sequence with the hex number of `41`
 
-Typically people use a "nibble table" or "table of nibbles" to assist in conversion. Visualizing it in a table also makes it apparent how easy the conversion can be.
+Typically, people use a "nibble table" or "table of nibbles" to assist in conversion. Visualizing it in a table also makes it apparent how straightforward the conversion is:
 
 | hex&nbsp;&nbsp;&nbsp; | decimal |  binary   |
 | :-------------------: | :-----: | :-------: |
@@ -137,7 +141,7 @@ As we mentioned earlier, binary is the language of the machine. It's what your c
 
 Are you ready for a doozy? The max hex color code in binary is `111111111111111111111111`.
 
-Luckily for us, armed with our new hexadecimal knowledge, we can make more sense of this by breaking it up into fours.
+Luckily for us, armed with our new hexadecimal knowledge, we can make more sense of this by breaking it up into fours and mapping it to hex:
 
 ```
 1111 1111 1111 1111 1111 1111
@@ -149,15 +153,15 @@ Now we can refer to our nibble table, and do the conversion. Each group of four 
 F F F F F F
 ```
 
-You may recognize this value! #FFFFFF is the hex color code for white. I am sure by now you are able to figure out what black is.
+You may recognize this value: #FFFFFF is the hex color code for white!
 
 ### Binary-To-Text Encodings
 
-What about that `\u2318` character sequence? More hex in action! This time, it also has a `\u` prefix, which is commonly used in many programming languages to denote the start of a [Unicode](https://home.unicode.org/) _code point_, which are written out in hex (The other most common prefix is `U+`). Sometimes you may see these sequences show up in code because the display or UI you are using isn't interpreting it as UTF-8 so it prints the raw value out. These are also handy when designing regular expressions to match certain characters or symbols in text.
+What about that `\u2318` character sequence? More hex in action! This time, however, it also has a `\u` prefix which is commonly used in many programming languages to denote the start of a [Unicode](https://home.unicode.org/) _code point_ (The other most common prefix is `U+`). Sometimes you may see these sequences show up in code because the display or UI you are using isn't interpreting it as UTF-8 so it prints the raw value out. These are also handy when designing regular expressions to match certain characters or symbols in text.
 
 ## Where to Go From Here
 
-We discussed some common examples of hexadecimal found in the wild. I hope now, armed with your new knowledge, can approach these numbers when you see them and feel like you have a better grasp of what is going on. Hexadecimal is used in a variety of very important computing contexts such as memory addresses, encodings, color representation, and more. Remember that computers speak binary, and hex helps us humans read it.
+We discussed some common examples of hexadecimal found in the wild. My hope is now you can approach these numbers and feel like you have a better grasp of what is going on. Hexadecimal is used in a variety of very important computing contexts such as memory addresses, encodings, color representation, and more. Remember that computers speak binary, and hex helps us humans read it.
 
 The Wikipedia articles on these topics are all excellent and can provide some reinforced learning if you wish to learn more. Happy hacking.
 
