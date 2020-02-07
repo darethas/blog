@@ -6,15 +6,20 @@ draft: false
 tags: [programming]
 ---
 
-If you come into programming without a computer science background, you probably have looked at weird stuff like this `\u2318` or `&#x0041;` either in your code, maybe in some regular expressions, or possibly in your markup for your web pages. If you have ever tried to read a stack trace or a crash dump of one of your programs, you may see some other examples like `0x39` or `0xF5`. If you are a web developer, you are already most familiar with something called "hex" color codes, used for coloring your text, background, and borders, such as `#FFFFFF` for white, or `#000000` for black.
+If you come into programming without a computer science background (honestly, even with one, no one taught me this stuff), you may have looked at sequences like `\u2318` or `&#x0041;` and wondered what it meant. If you have ever tried to read a stack trace or a crash dump of one of your programs, you may see some similar sequences like `0x39` or `0xF5`. If you are a web developer, you are most likely familiar with something called hex color codes, used for coloring your text, background, and borders, like `#FFFFFF` for white, or `#000000` for black.
 
-All of these examples are some variation of _hexadecimal_ numbers, or hex, in combination with some prefix to denote it as a hexadecimal number. Most programming languages have the ability understand hex literals so long as you first prefix it with something to tell your parser it is a hex digit. In most languages, it tends to be `0x` followed by the number. In CSS, a hexcolor is prefixed with `#`. (More on the `\u` and `&#x` prefixes later)
+All of these examples are some variation of _hexadecimal_ numbers, or hex for short. Typically the hex is used in combination with some sort of prefix to denote it as a hex number. Most programming languages have the ability understand hex literals so long as you use the specified prefix. In most languages, it tends to be `0x` followed by the number. In CSS, it is prefixed with `#`.
 
-In order to understand why hexadecimal is written the way it is and what values it represents, it may help to exlore a more fundamental topic.
+In order to understand the what and why behind hexadecimal, it may help to first exlore a more fundamental topic.
 
 ## Where do numbers come from?
 
-To understand where hexidecimal comes from, we have to think about numerical representation. What is a number? Our pre-historic ancestors have been counting on their fingers for millenia. The Egyptians are credited with the first ciphered numeral system, followed by the Greeks. The Sumerians and Babylonians represented numbers using wedge-shaped marks on clay tablets also known as Cuneiform. The Romans, arguably the most famous, used Roman Numerals.
+To better understand hexidecimal, it helps to understand numbers and numerical representation. A number is something used to count, measure, or label. Numerals are the symbols used to represent numbers. Our pre-historic ancestors have been counting on their fingers for millenia, so you could say our fingers were the first numerals, and adding up the fingers together would have been the first numeral system. The Egyptians are credited with the first _ciphered_ numeral system, meaning they mapped them to hieroglyphs.
+
+![Image credit to Encyclopedia Britannica](/img/egyptnumerals.jpg "Ancient Egyptian Numeral System")
+
+The Greeks quickly followed, mapping their numbers to Doric and Ionian.
+The Sumerians and Babylonians represented numbers using wedge-shaped marks on clay tablets also known as Cuneiform. The Romans, arguably the most famous, used Roman Numerals.
 
 Today, outside of Super Bowls, time units, angles, and watch faces [^1], the the vast majority of people know numbers as being 0-9. This is known as the Indo-Arabic numeral system. (Fun fact: Zero wasn't discovered until 628 AD by an Indian mathematician and astronomer named Brahmagupta) and are taught from a young age how to count using the positional notation of base 10, also known as the decimal system. The positional system is another key component in any numeral system, and is what allows you to easily express larger values. The Babylonians were credited with creating the first positional system. The overwhelming majority of the world uses the decimal system.
 
