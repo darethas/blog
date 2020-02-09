@@ -23,11 +23,11 @@ The Sumerians and Babylonians represented numbers using wedge-shaped marks on cl
 
 Today, outside of Super Bowls, time units, angles, and watch faces [^1], the the vast majority of people know numbers as being 0-9. This is known as the Indo-Arabic numeral system (Fun fact: Zero wasn't discovered until 628 AD by an Indian mathematician and astronomer named Brahmagupta).
 
-Besides numerals, another important component in a numeral system is the _positional notation_. Most of us are taught from a young age how to count using the positional notation of base 10, also known as decimal. You may recall being taught in school the different "places" that a number, such as the "ones", "tens", "hundreds", and so on. Positional systems are what allow you to easily express larger values beyond the basic numerals of 0-9. The Babylonians were credited with creating the first positional system referred to in modern times as _Sexagesimal_. The overwhelming majority of the world uses decimal today.
+Besides numerals, another important component in a numeral system is the _positional notation_. Most of us are taught from a young age how to count using the positional notation of base 10, also known as decimal. You may recall being taught in school the different "places" such as the "ones", "tens", "hundreds", and so on. This is an example of a positional system which is what allow you to easily express larger values beyond the basic numerals of 0-9. The Babylonians were credited with creating the first positional system referred to in modern times as _Sexagesimal_. The overwhelming majority of the world uses decimal today.
 
 Thus, when we think of "numbers" in the modern sense, we are really talking about two things: a numeral system, such as Indo-Arabic, and a positional system, such as base 10.
 
-If we attempt to visualize base 10, it might look something like this:
+If we attempt to visualize base 10 without the numerals, it might look something like this:
 
 ```
 // the base 10 positional system:
@@ -35,9 +35,9 @@ ______ ______ ______ ______ ______
  10^4   10^3   10^2   10^1   10^0
 ```
 
-If you evaluate those exponents, you may start to see that famous language in regards to those positions: _"ones, tens, hundreds, thousands"_. Any number raised to the zero power is 1 or ones. Then you have 10^1 which is 10 or tens, 10^2 which is 100 or hundreds, 10^3 which is 1000, 10^4 which is 1000 or thousands. In the immortal words of Gus Portokalos, ["There you go."](https://www.youtube.com/watch?v=VL9whwwTK6I)
+If you evaluate those exponents, you may start to see that famous language in regards to those positions: _"ones, tens, hundreds, thousands"_. Any number raised to the zero power is 1 or ones. Then you have 10^1 which is 10 or tens, 10^2 which is 100 or hundreds, 10^3 which is 1000, and so on.
 
-What is interesting about this is that it is generalizable. Starting from the furthest digit to the right, you have position 0. Each time you add a significant digit to the left, you have a new position, so you add one.
+More interestingly is this is generalizable. Starting from the furthest digit to the right, you have position 0. Each time you add a significant digit to the left, you have a new position, so you add one. A generalized form looks like this:
 
 ```
 // a generalized form:
@@ -45,7 +45,7 @@ ______ ______ ______ ______ ______
 base^n base^3 base^2 base^1 base^0
 ```
 
-As you may have caught whiff of by now, you don't have to use 10 as the base. You can use other numbers, like 2, 4, 6, 8, 12, 16, or even 60. For reasons beyond the scope of this post, there are qualities, both mathematical and pratical, that make certain bases work better than others. The pervailing theory around base 10's popularity is because people liked counting with their fingers.
+As you may have caught whiff of by now, you don't have to use 10 as the base. You can use other numbers, like 2, 4, 6, 8, 12, 16, or even 60. For reasons beyond the scope of this article, there are qualities, both mathematical and pratical, that make certain bases work better than others. The pervailing theory around base 10's popularity is because people liked counting with their fingers.
 
 ## The answer to our first riddle
 
@@ -70,7 +70,7 @@ The maximum value you can represent using a single hexadecimal digit, sometimes 
 16^0        ->      16^1   16^0
 ```
 
-Another way to arrive at a value a hexadecimal digit represents is to take the nibble and it's position value, multiply them together, and add it to the next. In the above example, we would take `(0*16^0)` and add it to `(1 * 16^1)`, which is 16. With this knowledge, we now have the ability to represent any decimal value we wish in hex.
+Another way to arrive at a value a hexadecimal digit represents is to take the nibble and it's positional value and multiply them together. You then do this for each position and add them all together. In the above example, we would take `(0*16^0)` and add it to `(1 * 16^1)`, which is 16. Some additional examples below:
 
 ```
 // some examples:
