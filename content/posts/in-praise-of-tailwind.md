@@ -32,4 +32,8 @@ And by reading it out to myself, this way I am also learning from the visual fee
 
 "Well you could have done that with just CSS by applying a class that has all those properties" or "you can just fiddle around in Chrome or Firefox by using the dev tools" -- sure, and apply it to one or two things here or there. But again, this goes along with the first benefit of Tailwind, in tandem with the fact that I learn by building apps and real things, not by fiddling around. Plus I didn't have this experience using raw CSS either. There is something about learning the Tailwind way that helped chunk the information for me in a way that is easier to digest and remember.
 
+This ultimately feeds into a very benificial positive feedback loop where with each app I build using Tailwind, I am not only learning how to use Tailwind better, but the underlying CSS as well, which in turn also helps me use Tailwind better.
+
+So from the bottom of my heart, I would just like to say:
+
 Good job, Tailwind.
