@@ -9,6 +9,9 @@ googleAnalytics = "UA-157969224-1"
 [params]
 subtitle = "The strong, loosely held opinions of a software developer on a variety of topics."
 
+[markup.highlight]
+style = "average"
+
 
 # Nav.
 [[menu.main]]
