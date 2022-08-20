@@ -4,7 +4,7 @@ summary: "The post where I reveal entirely way too much information about myself
 type: "page"
 ---
 
-Hi, I am Dimitrios. I am American with strong Greek roots, [Orthodox](https://orthodoxwiki.org/Introduction_to_Orthodox_Christianity), father of two wonderful children, and husband to the woman of my dreams. I am a software engineer but more fundamentally a lifelong learner. Currently, my talents reside in South Carolina at a humble little startup called Red Ventures. I am the youngest son of two wonderful people. My Baba had the classic "came to America with 13 dollars in my pocket" story.
+Hi, I am Dimitrios. I am American with strong Greek roots, [Orthodox](https://orthodoxwiki.org/Introduction_to_Orthodox_Christianity), father of two wonderful children, and husband to the woman of my dreams. I am a software engineer but more fundamentally a lifelong learner. Currently, my talents reside in North Carolina at a humble little startup called Passport. I am the youngest son of two wonderful people. My Baba had the classic "came to America with 13 dollars in my pocket" story.
 
 "My Big Fat Greek Wedding" is about 90% accurate about my life, minus two things. We don't spray windex on _everything_ (almost everything), and we don't have a Parthenon themed garage.
 
